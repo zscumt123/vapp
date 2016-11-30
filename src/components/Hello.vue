@@ -12,7 +12,7 @@
       <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docsfor This Template</a></li>
     </ul>
     <h2>Ecosystem</h2>
-      <h3>Hello,gith</h3>
+      <h3>Hello,githa</h3>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue--router,,</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex.</a></li>
