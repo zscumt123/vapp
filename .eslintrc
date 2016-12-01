@@ -19,9 +19,10 @@
     "no-eval":"error",
     //禁止使用多行字符串
     "no-multi-str":"error",
+    "no-console":["error", {"allow": ["warn", "error","log"]}],
+    "no-undef":0,
 
-
-    //强制在代码块中使用一致的大括号风格
+      //强制在代码块中使用一致的大括号风格
     "brace-style":"error",
     "camelcase":"error",
     //强制在逗号周围使用空格
@@ -33,7 +34,7 @@
     //强制关键字周围空格的一致性
     "keyword-spacing":["error",{"before":true,"after":true}],
     //一致的换行风格
-    "linebreak-style":["error", "unix"],
+    "linebreak-style":["error", "windows"],
     //要求构造函数首字母大写
     "new-cap":"error",
     //不允许多个空行,
