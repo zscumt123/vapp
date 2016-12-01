@@ -1,10 +1,13 @@
 <template>
-    <div class="yq-login-container">
-        <el-row>
-            <el-col :span="12"><Logo></Logo></el-col>
-            <el-col :span="12"><LoginForm></LoginForm></el-col>
-        </el-row>
+    <div class="yq-page-container">
+        <div class="yq-login-container">
+            <el-row>
+                <el-col :span="12"><Logo></Logo></el-col>
+                <el-col :span="12"><LoginForm></LoginForm></el-col>
+            </el-row>
+        </div>
     </div>
+
 </template>
 <script>
     import Logo from "./Logo.vue";
@@ -18,6 +21,11 @@
     };
 </script>
 <style lang="less">
+    .yq-page-container{
+        height: 100%;
+        background: url("../../assets/images/login_bg.png") no-repeat;
+        background-size: 100% 100%;
+    }
     @media(max-width: 992px){
         .yq-login-container{
             padding:0 30px;

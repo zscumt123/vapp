@@ -66,8 +66,10 @@ export default{
                 if (!valid) {
                     return false;
                 } else {
-                    this.isLoading = !this.isLoading;
-                    console.log(this.isLoading);
+//                    this.isLoading = !this.isLoading;
+//                    console.log(this.isLoading);
+                    console.log(this.$router);
+                    this.$router.replace("main");
                 }
             });
         }
