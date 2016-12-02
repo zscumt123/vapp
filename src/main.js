@@ -1,16 +1,18 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
-import ElementUI from "element-ui";
+// import VueRouter from "vue-router";
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/base.less";
-import "element-ui/lib/theme-default/index.css";
 
 import App from "./App";
-import {routes} from "./routes/index";
-Vue.use(VueRouter);
-Vue.use(ElementUI);
-const router = new VueRouter({
-    routes
-});
+import {router} from "./routes/index";
+
+axios.defaults.baseURL = "http://121.41.55.42:801/v1/";
+Vue.prototype.axios = axios;
+// Vue.use(VueRouter);
+// const router = new VueRouter({
+//     routes
+// });
 new Vue({
     router,
     template: "<App/>",

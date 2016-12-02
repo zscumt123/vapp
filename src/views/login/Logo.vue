@@ -2,8 +2,8 @@
     <div class="yq-logo-container">
         <img src="../../assets/images/logo.png">
         <span>CLOUD LUCK</span>
-        <h3>{{logoTitle}}</h3>
-        <h5>{{logoInfo}}</h5>
+        <h3 v-once>{{logoTitle}}</h3>
+        <h5 v-once>{{logoInfo}}</h5>
     </div>
 </template>
 <script>
