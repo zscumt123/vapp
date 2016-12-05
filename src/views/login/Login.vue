@@ -20,6 +20,9 @@
     import LoginForm from "./LoginForm.vue";
     export default{
         name: "Login",
+//        beforeRouteEnter(to,from,next) {
+//
+//        },
         components: {
             Logo,
             LoginForm
