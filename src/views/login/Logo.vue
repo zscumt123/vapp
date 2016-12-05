@@ -4,9 +4,11 @@
         <span>CLOUD LUCK</span>
         <h3 v-once>{{logoTitle}}</h3>
         <h5 v-once>{{logoInfo}}</h5>
+        <!--<div><Loading></Loading></div>-->
     </div>
 </template>
 <script>
+    import Loading from "../../components/loading/loading.vue";
     export default{
         name: "logo",
         data() {
@@ -14,6 +16,9 @@
                 logoTitle: "新一代智慧云餐饮管理系统",
                 logoInfo: "让管理更加轻松、高效、安全、智能"
             };
+        },
+        components: {
+            Loading
         }
     };
 

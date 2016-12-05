@@ -15,13 +15,17 @@ import Content from "../views/content/Content.vue";
 Vue.use(VueRouter);
 const routes = [
     {
+        path: "/",
+        name: "index",
+        component: Login
+    },
+    {
         path: "/login",
         name: "login",
         component: Login
     },
     {
         path: "/main",
-        // name: "main",
         component: Main,
         children: [
             {
@@ -48,10 +52,5 @@ const routes = [
 ];
 const router = new VueRouter({
     routes
-});
-router.beforeEach((to, from, next) => {
-    console.log(to);
-    console.log(to.name);
-    next();
 });
 export {router};

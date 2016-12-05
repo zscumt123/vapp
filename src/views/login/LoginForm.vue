@@ -60,10 +60,18 @@ export default{
             }).then(function(res) {
                 if (res.status == 200) {
                     let token = `Bearer ${res.data.access_token}`;
+                    //login success
+                    that.$store.dispatch("USER_LOGIN", {
+                        username: that.loginData.account,
+                        token: token
+                    });
                     //set token in global axios with token
                     axios.defaults.headers.common["Authorization"] = token;
-                    that.$router.replace({path: "main/123"});
-                    console.log(that.$router);
+//                    console.log(axios.defaults.headers.common["Authorization"]);
+//                    console.log(that.$store.state.isLogin);
+
+                    that.$router.replace({path: "main"});
+//                    console.log(that.$router);
                 }
             });
         }
