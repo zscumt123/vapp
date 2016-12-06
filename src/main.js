@@ -15,7 +15,6 @@ if (store.state.isLogin) {
     axios.defaults.headers.common["Authorization"] = token;
 }
 router.beforeEach(({path, name}, from, next) => {
-    console.log(path);
     let isLogin = store.state.isLogin;
     if (!isLogin && name != "login" && name != "index") {
         return next({path: "/login"});
@@ -28,3 +27,4 @@ new Vue({
     template: "<App/>",
     components: {App}
 }).$mount("#container");
+export default Vue;

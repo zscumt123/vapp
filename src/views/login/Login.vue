@@ -1,10 +1,6 @@
 <template>
     <div class="yq-page-container">
         <div class="yq-login-container">
-            <!--<el-row>-->
-                <!--<el-col :span="12"><Logo></Logo></el-col>-->
-                <!--<el-col :span="12"><LoginForm></LoginForm></el-col>-->
-            <!--</el-row>-->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-6"><Logo></Logo></div>
@@ -20,9 +16,14 @@
     import LoginForm from "./LoginForm.vue";
     export default{
         name: "Login",
-//        beforeRouteEnter(to,from,next) {
-//
-//        },
+        beforeRouteEnter(to, from, next) {
+            //if login, go to main page
+            next((vm) => {
+                if (vm.$store.state.isLogin) {
+                    vm.$router.replace({path: "main"});
+                }
+            });
+        },
         components: {
             Logo,
             LoginForm

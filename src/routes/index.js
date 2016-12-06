@@ -10,7 +10,6 @@ import Main from "../views/main/Main.vue";
 //         resolve(require("../views/main/Main.vue"));
 //     });
 // };
-import QuickStart from "../views/quickstart/QuickStart.vue";
 import Content from "../views/content/Content.vue";
 Vue.use(VueRouter);
 const routes = [
@@ -27,17 +26,8 @@ const routes = [
     {
         path: "/main",
         component: Main,
+        redirect: {name: "content", params: {category: "quickstart"}},
         children: [
-            {
-                path: "",
-                component: QuickStart,
-                name: "main"
-            },
-            {
-                path: "quickstart",
-                component: QuickStart,
-                name: "quickstart"
-            },
             {
                 path: "content/:category",
                 component: Content,
@@ -47,7 +37,7 @@ const routes = [
     },
     {
         path: "*",
-        redirect: "main/quickstart"
+        redirect: "/main"
     }
 ];
 const router = new VueRouter({

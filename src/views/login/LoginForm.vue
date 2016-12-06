@@ -67,11 +67,7 @@ export default{
                     });
                     //set token in global axios with token
                     axios.defaults.headers.common["Authorization"] = token;
-//                    console.log(axios.defaults.headers.common["Authorization"]);
-//                    console.log(that.$store.state.isLogin);
-
                     that.$router.replace({path: "main"});
-//                    console.log(that.$router);
                 }
             });
         }
