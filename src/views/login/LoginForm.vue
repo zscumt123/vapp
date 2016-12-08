@@ -18,12 +18,15 @@
                     <input type="checkbox" v-model="isRemember"> 记住账号
                 </label>
             </div>
-            <button type="submit" class="btn btn-success btn-block btn-lg yq-login-button"  @click="onSubmit">登录</button>
+            <!--<button type="submit" class="btn btn-success btn-block btn-lg yq-login-button"  @click="onSubmit">登录</button>-->
+            <Btn class="yq-login-button" status="success" block size="lg" v-on:click="onSubmit">登录</Btn>
         </div>
     </div>
 </template>
 <script>
 import axios from "axios";
+import Btn from "../../components/button/Button.vue";
+import Radio from "../../components/radio/Radio.vue";
 export default{
     name: "LoginForm",
     data() {
@@ -34,9 +37,14 @@ export default{
                 password: "",
             },
             isRemember: false,
-            isLoading: false
+            isLoading: false,
+            model: "1"
 
         };
+    },
+    components: {
+        Btn,
+        Radio
     },
     methods: {
         onSubmit() {

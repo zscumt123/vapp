@@ -9,7 +9,7 @@
                 <div class="col-xs-8 clearfix">
                     <div  class="yq-nav-item pull-left" v-for="(item,index) in routerParams">
                         <router-link :to="{name:'content',params:{category:item.Route}}">
-                            <div><span :class="['glyphicon','glyphicon-'+navIcons[index]]"></span></div>
+                            <div><Icon :name="navIcons[index]"></Icon></div>
                             <span class="yq-nav-title">{{item.Name}}</span>
                         </router-link>
                     </div>
@@ -23,7 +23,7 @@
     </div>
 </template>
 <script>
-
+    import Icon from "../../components/icon/Icon.vue";
     export default{
         name: "topNav",
         data() {
@@ -31,6 +31,9 @@
                 routerParams: this.$store.state.systemParameters,
                 navIcons: ["star", "book", "record", "list-alt", "link", "th-list"]
             };
+        },
+        components: {
+            Icon
         },
         computed: {
             routerParams: function () {
