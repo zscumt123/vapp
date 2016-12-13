@@ -5,6 +5,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 const USER_LOGIN = "USER_LOGIN";
+const USER_LOGOUT = "USER_LOGOUT";
 const SYSTEM_PARAM = "SYSTEM_PARAM";
 Vue.use(Vuex);
 export  default new Vuex.Store({
@@ -33,11 +34,20 @@ export  default new Vuex.Store({
             state.userInfo = user;
             window.localStorage.setItem("user", JSON.stringify(user));
 
+        },
+        [USER_LOGOUT](state) {
+            state.isLogin = false;
+            window.localStorage.removeItem("isLogin");
+            state.userInfo = {};
+            window.localStorage.removeItem("user");
         }
     },
     actions: {
         [USER_LOGIN]({commit}, user) {
             commit(USER_LOGIN, user);
+        },
+        [USER_LOGOUT]({commit}) {
+            commit(USER_LOGOUT);
         },
         [SYSTEM_PARAM]({state}) {
             if (state.systemParameters.length == 0) {

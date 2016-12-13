@@ -7,13 +7,28 @@ import "./assets/css/base.less";
 import App from "./App";
 import {router} from "./routes/index";
 import store from "./stores/index";
-
+//the url of api request
 axios.defaults.baseURL = "http://121.41.55.42:801/v1/";
 Vue.prototype.axios = axios;
+
+//if response error code===401, go to login page
+axios.interceptors.response.use((res) => {
+    return res;
+}, (error) => {
+    if (error.response.status === 401) {
+        console.log(error.response.status);
+        store.dispatch("USER_LOGOUT");
+        router.replace({path: "login"});
+    }
+    return Promise.reject(error);
+});
+
+//set token in http header
 if (store.state.isLogin) {
     let token = store.state.userInfo.token;
     axios.defaults.headers.common["Authorization"] = token;
 }
+
 router.beforeEach(({path, name}, from, next) => {
     let isLogin = store.state.isLogin;
     if (!isLogin && name != "login" && name != "index") {
