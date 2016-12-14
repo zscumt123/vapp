@@ -16,9 +16,6 @@ export  default new Vuex.Store({
     },
     getters: {
         childParam: (state) => {
-            // if (state.systemParameters.length != 0) {
-            //     return state.systemParameters.filter((item) => item.Route != "quickstart");
-            // }
             return state.systemParameters;
         },
         navRouteParam: (state) => {

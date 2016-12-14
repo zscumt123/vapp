@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul class="yq-menu">
         <slot></slot>
     </ul>
 </template>
@@ -50,6 +50,7 @@
                     }) ;
                 }
                 this.openedMenus.push(index);
+                console.log(this);
 
             },
             closeMenu(index) {
@@ -86,6 +87,9 @@
     };
 
 </script>
-<style>
+<style lang="less" scoped>
+    .yq-menu{
+        width:182px;
+    }
 
 </style>

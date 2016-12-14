@@ -1,12 +1,15 @@
 import Vue from "vue";
-// import VueRouter from "vue-router";
 import axios from "axios";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/base.less";
 
 import App from "./App";
 import {router} from "./routes/index";
 import store from "./stores/index";
+
+import * as Directive from "./global/directive/calheight";
+Vue.use(Directive);
 //the url of api request
 axios.defaults.baseURL = "http://121.41.55.42:801/v1/";
 Vue.prototype.axios = axios;

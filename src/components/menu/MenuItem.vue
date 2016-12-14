@@ -1,5 +1,5 @@
 <template>
-    <li class="menu-item"
+    <li class="yq-menu-item"
         @click="handleClick"
         :class="{
             'is-active':active
@@ -33,6 +33,16 @@
     };
 
 </script>
-<style>
+<style lang="less" scoped>
+    .yq-menu-item{
+        line-height: 32px;
+        color: #999999;
+        padding-left: 40px;
+        border-bottom: 1px solid #eeefef;
+        cursor: pointer;
+        &:hover{
+            color:#4db232;
 
+         }
+    }
 </style>

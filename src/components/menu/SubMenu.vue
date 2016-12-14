@@ -1,10 +1,10 @@
 <template>
-    <li :class="{
+    <li class="yq-sub-menu" :class="{
         'is-opened':opened
     }">
         <div @click="handleClick">
             <slot name="title"></slot>
-            <Icon name="opened ? 'chevron-up' : 'chevron-down'"></Icon>
+            <Icon name="chevron-down"></Icon>
         </div>
         <ul v-show="opened"><slot></slot></ul>
     </li>
@@ -41,6 +41,25 @@
     };
 
 </script>
-<style>
+<style lang="less" scoped>
+    .yq-sub-menu > div{
+        line-height: 34px;
+        color: #ffffff;
+        padding-left:40px;
+        background-color:#18b025;
+        cursor: pointer;
+        border-bottom: 2px solid #ffffff;
+        font-size: 16px;
+
+    }
+    .yq-sub-menu .glyphicon{
+        float: right;
+        margin:10px 10px 0 0;
+        transition: 0.3s;
+        font-size: 12px;
+    }
+    .yq-sub-menu.is-opened .glyphicon{
+        transform: rotate(180deg);
+    }
 
 </style>
