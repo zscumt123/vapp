@@ -1,11 +1,37 @@
 <template>
     <div class="yq-main-page">
-        <div class="yq-main-wrapper">Hello,World!!!</div>
+        <div class="yq-main-wrapper">
+            <!--<tab>-->
+                <!--<tabpane label="hello">hello</tabpane>-->
+                <!--<tabpane label="world">world</tabpane>-->
+                <!--<tabpane label="css">css</tabpane>-->
+                <!--<tabpane label="java">java</tabpane>-->
+            <!--</tab>-->
+            <!--<div>-->
+                <!--<ol class="nav nav-tabs">-->
+                    <!--<li>1111</li>-->
+                    <!--<li>1111</li>-->
+                    <!--<li>1111</li>-->
+                    <!--<li>1111</li>-->
+                    <!--<li>1111</li>-->
+                    <!--<li>1111</li>-->
+                <!--</ol>-->
+            <!--</div>-->
+            <div></div>
+            <div class="">11222</div>
+
+        </div>
     </div>
 </template>
 <script>
+//    import tab from "../../components/tab/Tabs.vue";
+//    import tabpane from "../../components/tab/TabPane.vue";
     export default{
         name: "MainPage"
+//        components: {
+//            tab,
+//            tabpane
+//        }
     };
 </script>
 <style lang="less" scoped>

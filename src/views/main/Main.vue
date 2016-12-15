@@ -17,7 +17,6 @@
         },
         methods: {
             getNavData() {
-                console.log(this);
                 this.$store.dispatch("SYSTEM_PARAM");
             }
         },

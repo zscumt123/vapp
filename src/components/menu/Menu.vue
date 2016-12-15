@@ -82,6 +82,7 @@
             }
         },
         mounted() {
+            console.log(this);
             this.openActiveItemMenus();
         }
     };
