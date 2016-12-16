@@ -69,8 +69,10 @@
 //            handleClose(index, indexPath) {
 //                console.log(index, indexPath);
 //            },
-            handleSelect(index, indexPath) {
-                console.log(index, indexPath);
+            handleSelect(index) {
+//                console.log(index, indexPath);
+
+                this.$store.state.hasOpenedTabs.push(index);
             }
         }
     };

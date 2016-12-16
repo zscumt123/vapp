@@ -12,7 +12,8 @@ export  default new Vuex.Store({
     state: {
         userInfo: JSON.parse(window.localStorage.getItem("user")) || {},
         isLogin: Boolean(window.localStorage.getItem("isLogin")) || false,
-        systemParameters: []
+        systemParameters: [],
+        hasOpenedTabs: []
     },
     getters: {
         childParam: (state) => {

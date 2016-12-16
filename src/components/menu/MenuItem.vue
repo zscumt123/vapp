@@ -44,5 +44,8 @@
             color:#4db232;
 
          }
+    &.is-active{
+        color:#4db232;
+     }
     }
 </style>

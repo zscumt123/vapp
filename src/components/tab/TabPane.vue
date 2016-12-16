@@ -1,5 +1,5 @@
 <template>
-    <div class="tab-pane" :class="{'active':show && $slots.default}">
+    <div class="yq-tab-pane" v-show="show && $slots.default">
         <slot></slot>
     </div>
 </template>
@@ -52,3 +52,8 @@
 
     };
 </script>
+<style>
+    .yq-tab-pane{
+
+    }
+</style>
